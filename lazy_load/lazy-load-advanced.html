@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <article>
+        <h1>Test</h1>
+        <p>I'm baby offal chartreuse sustainable gochujang shaman franzen tofu synth. Wayfarers helvetica viral, four
+            loko asymmetrical art party biodiesel af prism salvia lyft vinyl. Kickstarter trust fund tousled, enamel pin
+            same pour-over DIY chia cloud bread tumblr. Hoodie hell of mixtape williamsburg tousled. Intelligentsia
+            wayfarers squid ugh. Bruh hexagon bespoke, kinfolk farm-to-table tousled edison bulb etsy.</p>
+        <p>Locavore chia blackbird spyplane kale chips tousled pork belly mustache palo santo fingerstache four dollar
+            toast craft beer single-origin coffee pitchfork keffiyeh. Hammock street art quinoa disrupt, migas
+            humblebrag yuccie vinyl wayfarers gastropub meggings pok pok try-hard. Sriracha ugh offal coloring book big
+            mood cliche. Photo booth kale chips celiac, Brooklyn tumblr raw denim hashtag banjo health goth tbh.</p>
+        <p>Sartorial fixie irony mustache cray hashtag umami. Migas tattooed normcore chia skateboard cold-pressed
+            listicle letterpress gochujang squid hella fanny pack ascot shaman tote bag. Offal meggings disrupt
+            dreamcatcher woke. Try-hard narwhal same forage, tattooed actually pork belly helvetica plaid flannel
+            meggings Brooklyn snackwave cliche adaptogen. 8-bit synth godard man bun gluten-free swag everyday carry
+            celiac. Big mood venmo coloring book af salvia wolf.</p>
+        <p>Locavore literally biodiesel tofu, tonx YOLO artisan edison bulb trust fund palo santo mixtape bruh. La croix
+            PBR&amp;B subway tile sriracha pop-up bodega boys. Humblebrag forage twee cray, keytar meggings ramps beard
+            crucifix synth VHS semiotics glossier air plant. Occupy listicle kombucha etsy. Pabst blog farm-to-table
+            chillwave.</p>
+        <p>Deep v kickstarter everyday carry, iceland sus schlitz street art forage DSA. Fanny pack tumblr adaptogen
+            cornhole umami hoodie ethical, tote bag art party organic sartorial scenester street art. Mixtape vape meh
+            sartorial bespoke, kinfolk microdosing. Grailed tonx venmo drinking vinegar, meditation church-key pabst raw
+            denim direct trade chia same sustainable paleo freegan gluten-free. Seitan pug blackbird spyplane vice
+            pickled messenger bag hexagon PBR&amp;B yes plz.</p>
+        <p>Hexagon vice palo santo four dollar toast tofu aesthetic. Pitchfork yr readymade solarpunk. Farm-to-table
+            kitsch 3 wolf moon, blue bottle gorpcore iPhone biodiesel kinfolk. Polaroid 90's chillwave, jean shorts
+            ramps hot chicken celiac irony grailed brunch authentic PBR&amp;B franzen.</p>
+        <p>Irony fixie retro twee schlitz actually knausgaard four dollar toast asymmetrical vinyl vice. Direct trade
+            farm-to-table art party umami biodiesel. Grailed af subway tile echo park. Humblebrag jawn pitchfork cloud
+            bread bicycle rights shoreditch sus fashion axe four dollar toast, whatever kinfolk. Grailed glossier
+            chambray, mumblecore marxism cliche poutine art party big mood.</p>
+        <p>YOLO cliche ennui next level disrupt. Big mood hella banjo gochujang chillwave fam jawn VHS whatever tilde
+            actually. IPhone tilde skateboard coloring book mixtape crucifix forage humblebrag venmo swag cupping.
+            Occupy DIY leggings, retro poutine aesthetic gochujang sus bodega boys kinfolk. Squid keytar af semiotics,
+            chambray farm-to-table polaroid put a bird on it mlkshk portland tacos leggings tote bag church-key.
+            Gastropub DSA meh +1, snackwave quinoa poke marfa organic bespoke small batch beard disrupt. Ugh skateboard
+            man braid grailed.</p>
+        <!-- without lazy load -->
+        <!-- <img 
+            src="https://res.cloudinary.com/dvfhgkkpe/image/upload/v1692894181/unsplash_high_res/andre-benz-qJfznuTMAYA-unsplash_1.jpg"
+            /> -->
+        <!-- with lazy load -->
+        <!-- <img 
+            src="https://res.cloudinary.com/dvfhgkkpe/image/upload/v1692894181/unsplash_high_res/andre-benz-qJfznuTMAYA-unsplash_1.jpg"
+            loading="lazy"
+            /> -->
+
+        <!-- lazy load advanced -->
+        <div class="blurred-img">
+            <img 
+            src="https://res.cloudinary.com/dvfhgkkpe/image/upload/v1692894181/unsplash_high_res/andre-benz-qJfznuTMAYA-unsplash_1.jpg"
+            loading="lazy"
+            />
+        </div>
+        <p>Neutral milk hotel chicharrones gochujang, meggings small batch stumptown 90's pug blackbird spyplane
+            solarpunk tumblr. Distillery ugh crucifix, synth cardigan pabst pork belly XOXO artisan mixtape man braid
+            bespoke. Cray sriracha gochujang whatever poke poutine celiac. Chambray lyft JOMO, fingerstache tbh taiyaki
+            fit mixtape gentrify selvage typewriter drinking vinegar before they sold out ugh.</p>
+        <p>Glossier af austin, tumblr 90's succulents yes plz paleo pinterest selfies umami. Jianbing hashtag literally
+            kombucha flexitarian, readymade PBR&amp;B vaporware migas food truck mlkshk pop-up fashion axe air plant
+            heirloom. Pabst migas artisan, shabby chic chartreuse lo-fi palo santo flannel. Hot chicken shoreditch
+            kombucha, sriracha hell of praxis same biodiesel tilde snackwave man bun affogato iceland hoodie grailed.
+            Asymmetrical chicharrones fingerstache prism raw denim affogato pitchfork whatever iceland bushwick
+            flexitarian distillery DIY waistcoat helvetica.</p>
+    </article>
+
+    <script>
+        const blurredImageContainer = document.querySelector(".blurred-img")
+        const blurredImage = document.querySelector(".blurred-img img")
+
+        function loaded() {
+            blurredImageContainer.classList.add("loaded")
+        }
+
+        // image completely loaded, e.g. if still in cache
+        // https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/complete
+        if (blurredImage.complete) {
+            console.log("image already loaded!")
+            loaded()
+        } else {
+            console.log("image not loaded yet!")
+            blurredImage.addEventListener("load", loaded)
+        }
+    </script>
+</body>
+
+</html>
